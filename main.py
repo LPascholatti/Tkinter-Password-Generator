@@ -18,12 +18,12 @@ def generatePassword(passlen):
 
 # attempting to generate a new password and render at the same time - not working
 
-def makePassword(passlen):
+def makePassword():
   passlen = numberLength.get()
   passlenInt = int(passlen)
   newPassword = "Your new password is: " + generatePassword(passlenInt)
   renderNewPassword = Label(window, text=newPassword)
-  renderNewPassword.grid(row = 6, column = 0)
+  renderNewPassword.grid(row = 7, column = 0)
   print("newpassword:", newPassword)
 
 def getNumber():
@@ -34,12 +34,14 @@ def getNumber():
   return passlen
 
 button = Button(window, text="Submit Password Length", padx=15, pady=15, fg="black", bg="white", command=getNumber)
+button2 = Button(window, text="New Password", padx=15, pady=15, fg="black", bg="white", command=makePassword)
 
-generatedPassword = Label(window, text = "Your password is: " + generatePassword(8))
-generatedPassword.grid(row = 4, column=0)
+# generatedPassword = Label(window, text = "Your password is: " + generatePassword(8))
+# generatedPassword.grid(row = 4, column=0)
 
 introText.grid(row = 0, column=0)
 numberLength.grid(row = 1, column=0)
 button.grid(row = 3, column=0)
+button2.grid(row = 6, column=0)
 
 window.mainloop()
