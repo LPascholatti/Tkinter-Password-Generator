@@ -25,7 +25,7 @@ def makePassword():
 
 def getNumber():
   passlen = numberLength.get()
-  renderNumber = Label(window, text=passlen)
+  renderNumber = Label(window, text= "Your Password's Length is: " + passlen)
   renderNumber.grid(row = 4, column = 0)
   print("passlen in getNumber:", passlen)
   return passlen
