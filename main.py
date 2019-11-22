@@ -10,4 +10,5 @@ window = tkinter.Tk()
 window.title("GUI")
 # pack is used to show the object in the window
 label = tkinter.Label(window, text = "Welcome to Lucas Pascholatti's Password Generator, below you will find your new password:").pack()
+label = tkinter.Label(window, text = password).pack()
 window.mainloop()
